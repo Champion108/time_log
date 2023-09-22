@@ -1,5 +1,3 @@
-
-
 function max(a,b){
     if(a>b) return a;
     else return b;
@@ -9,16 +7,23 @@ let init= localStorage.getItem('txt') || "";
 let head= localStorage.getItem('head') || "";
 
 
+
 function ini(){
     const main= document.getElementsByClassName("main")[0];
     main.innerHTML += init;
 
     const heading = document.getElementById("happy");
     heading.value = head;
+    console.log(head);
 }
 
 
 ini();
+
+function he(){
+    const h= document.getElementById("happy").value;
+    localStorage.setItem('head',h);
+}
 
 function fere(){
     const textarea = document.getElementById("resizableTextArea");
@@ -26,11 +31,6 @@ function fere(){
     height = max(height,52);
     console.log(height+"px");
     textarea.style.height = height+"px";
-}
-
-function he(){
-    const h= document.getElementById("happy").value;
-    localStorage.setItem('head',h);
 }
 
 function jh(){
