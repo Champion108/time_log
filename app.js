@@ -6,11 +6,17 @@ function max(a,b){
 }
 
 let init= localStorage.getItem('txt') || "";
+let head= localStorage.getItem('head') || "";
+
 
 function ini(){
     const main= document.getElementsByClassName("main")[0];
     main.innerHTML += init;
+
+    const heading = document.getElementById("happy");
+    heading.value = head;
 }
+
 
 ini();
 
@@ -20,6 +26,11 @@ function fere(){
     height = max(height,52);
     console.log(height+"px");
     textarea.style.height = height+"px";
+}
+
+function he(){
+    const h= document.getElementById("happy").value;
+    localStorage.setItem('head',h);
 }
 
 function jh(){
